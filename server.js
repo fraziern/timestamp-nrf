@@ -1,9 +1,10 @@
 'use strict';
 
 var express = require('express');
-// var session = require('express-session');
+var Stamper = require('stamper');
 
 var app = express();
+var stamper = new Stamper();
 
 app.use(express.static(__dirname + '/public'));
 
@@ -13,7 +14,7 @@ app.get('/', function(req, res, next) {
 
 app.get('/:id', function (req, res) {
   var id = req.params.id;
-  res.send(id);
+  res.send(stamper.getTimestamp(id));
 });
 
 
