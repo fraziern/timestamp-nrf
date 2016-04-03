@@ -1,7 +1,7 @@
 'use strict';
 
 var express = require('express');
-var Stamper = require('stamper');
+var Stamper = require('./stamper');
 
 var app = express();
 var stamper = new Stamper();
