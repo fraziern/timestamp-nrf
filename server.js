@@ -11,6 +11,11 @@ app.get('/', function(req, res, next) {
   next();
 });
 
+app.get('/:id', function (req, res) {
+  var id = req.params.id;
+  res.send(id);
+});
+
 
 var port = process.env.PORT || 8080;
 app.listen(port,  function () {
