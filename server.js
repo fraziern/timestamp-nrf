@@ -5,9 +5,10 @@ var express = require('express');
 
 var app = express();
 
-app.use(express.static(process.cwd() + '/public/index.html'));
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res, next) {
+  console.log('served a file!');
   next();
 });
 
