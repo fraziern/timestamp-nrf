@@ -8,7 +8,6 @@ var app = express();
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res, next) {
-  console.log('served a file!');
   next();
 });
 
